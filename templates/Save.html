@@ -1,0 +1,48 @@
+{% extends 'introducation.html' %}
+{% block content %}
+               <div class="page-breadcrumb">
+                    <h1>Welcome To the Sent data area!</h1>
+                   <h3>Here you can find your incident data!</h3>
+
+                </div>
+
+               <div class="page-breadcrumb">
+                <div class="d-flex align-items-center">
+
+                    <div class="table-responsive">
+		                <table class="table table-bordered table-hover">
+                                 <tr style="background-color:#ffffff;">
+                                        <th>No</th>
+                                        <th>location</th>
+                                        <th>Incident Department</th>
+                                        <th>Date</th>
+                                        <th>Time of Incident</th>
+                                        <th> Incident Location</th>
+                                        <th>Sub Incident Types</th>
+                                        <th>Initial Severity</th>
+                                        <th>Suspected Cause</th>
+                                        <th>Immediate Action Taken</th>
+
+                                    </tr>
+                                {% for i in data %}
+
+                                    <tr>
+
+                                        <td>{{i.id}}</td>
+                                        <td>{{i.select}}</td>
+                                        <td>{{i.message}}</td>
+                                        <td>{{i.times}}</td>
+                                        <td>{{i.date}}</td>
+                                        <td>{{i.message1}}</td>
+                                        <td>{{i.checkbox}}</td>
+                                        <td>{{i.slt2}}</td>
+                                        <td>{{i.message2}}</td>
+                                        <td>{{i.message3}}</td>
+
+                                    </tr>
+
+                                {% endfor %}
+
+                            </table>
+
+   {% endblock %}

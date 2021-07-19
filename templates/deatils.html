@@ -1,0 +1,151 @@
+
+{% extends 'introducation.html' %}
+{% block content %}
+<div class="d-flex align-items-center">
+                <div class="page-breadcrumb">
+
+             <form action="deatils" method="post">
+                 {% csrf_token %}
+                 <div class="page-breadcrumb">
+                        <h1 style="color: black;">New Master Incident</h1>
+                        <h3 style="color: black;">Initial Reporting</h3>
+                 </div>
+            <div class="page-breadcrumb">
+                <div class="d-flex align-items-center">
+                    <table>
+                            <td>
+                        </td>
+                        <tr>
+                            <td>
+                    <label>Location:</label>
+                    </td>
+                    <td>
+                    <select name="slt">
+                        <option>Corporate Headoffice</option>
+                        <option>Operations  Department</option>
+                        <option>Work Station</option>
+                        <option>Marketing Division</option>
+                    </select>
+                    </td>
+
+                    <br>
+                    <tr>
+                        <td>
+                    <label>Incident Department:</label>
+                    </td>
+                    <td>
+                    <textarea style="border-top-color: white; border-left-color: white; border-right-color: white; border-bottom-color: white; width: 140%"; required class="form-control custom-shadow  bg-white"></textarea>
+                    </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                    <label>Date and</label>
+                            <br>
+                    <label>Time of Incident:</label>
+                    </td>
+                    <td>
+                    <input type="date" name="lname" required>
+                    <br>
+                    <input type="time" name="sname" required>
+                    </td>
+                    </tr>
+
+                    <br>
+                    <tr>
+                        <td>
+                    <label>Incident Location:</label>
+                    </td>
+                    <td>
+                    <textarea style="border-top-color: white; border-left-color: white; border-right-color: white; border-bottom-color: white; width: 140%"; required class="form-control custom-shadow  bg-white" name="english" required></textarea>
+                    </td>
+                    </tr>
+
+                    <br>
+                    <tr>
+                        <td>
+                    <label>Initial Severity:</label>
+                    </td>
+                        <td>
+                    <select  name="slt2">
+                    <option value="male">Mild</option>
+                    <option value="female">Moderate</option>
+                    <option value="others">Severe</option>
+                    <option value="others">fatal</option>
+                    </select>
+                    </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                    <label>Suspected Cause:</label>
+                    </td>
+                    <td>
+                    <textarea style="border-top-color: white; border-left-color: white; border-right-color: white; border-bottom-color: white; width: 140%"; required class="form-control custom-shadow  bg-white" name="txt3" required></textarea>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <label>Immediate Action</label>
+                            <br>
+                        <label>Taken:</label>
+                    </td>
+                    <td>
+                    <textarea style="border-top-color: white; border-left-color: white; border-right-color: white; border-bottom-color: white; width: 140%"; required class="form-control custom-shadow  bg-white" name="txt4" required></textarea>
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                            <label>Sub Incident Types:</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="name" value="Environmental Incident">Environmental Incident
+                            <br>
+                            <input type="checkbox" name="name" value="Injury/Illness">Injury/Illness
+                            <br>
+                            <input type="checkbox" name="name" value="Property Damage">Property Damage
+                            <br>
+                            <input type="checkbox" name="name" value="Vehicle">Vehicle
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                        <label>Reported By:</label>
+                    </td>
+                    <td> RandomUser</td>
+                    </tr>
+                    </td>
+                    </tr>
+                    </table>
+            </div>
+        </div>
+                 <div class="page-wrapper">
+            <div class="page-breadcrumb">
+                <div class="d-flex align-items-center">
+                    <div class="ml-auto">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb m-0 p-0">
+                                <li class="breadcrumb-item text-muted active" aria-current="page">
+                                <button type="submit"  class="btn waves-effect waves-light btn-primary">Save</button></li>
+
+                                <li class="breadcrumb-item text-muted" aria-current="page">
+                                     <div class="btn-group btn-group-justified">
+                                          <a  style="color:#ffffff" href="{% url 'Mark1:introducation'%}" class="btn btn-primary">Save for later</a>
+                                     </div>
+                                </li>
+
+                                <li class="breadcrumb-item text-muted" aria-current="page">
+                                <button type="reset" class="btn btn-primary pull-right">Cancel</button>
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <br>
+            </form>
+
+
+{% endblock %}

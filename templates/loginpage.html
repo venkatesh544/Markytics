@@ -1,0 +1,35 @@
+{% extends 'introducation.html' %}
+{% block content %}
+<div class="d-flex align-items-center">
+                <div class="page-breadcrumb">
+
+                    <h1>Welcome</h1>
+                    <h1>Login</h1>
+
+                        <form action="" method="post">
+                		        {% csrf_token %}
+
+
+                                <nav aria-label="breadcrumb">
+                                            <br>
+                                    <p class="text-danger">{{id}}</p>
+
+                                     Username:-<input type="text" placeholder="Enter Username" name="uname" required>
+
+                                            <br>
+                                            <br>
+                                    <p class="text-danger">{{password}}</p>
+
+                                    Password:-<input type="password" placeholder="Enter Password" name="psw" required>
+                                            <br>
+                                            <br>
+                                    <button type="submit"  class="btn waves-effect waves-light btn-primary">Login</button>
+                                            <br>
+                                            <br>
+                                    Don't have an account?  <a href="{% url 'Mark1:registeration'%}">Register here!</a>
+                                </nav>
+                        </form>
+                     </div>
+
+                </div>
+{% endblock %}
